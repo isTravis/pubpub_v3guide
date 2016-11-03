@@ -1,0 +1,347 @@
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0;
+				font-family: 'Helvetica';
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+			}
+			.left-panel {
+				background-color: #F3F3F4;
+				position: fixed;
+				height: calc(100vh - 2em);
+				width: 300px;
+				padding: 1em;
+				overflow: hidden;
+				overflow-y: scroll;
+			}
+			.right-panel {
+				margin-left: calc(300px + 2em);
+				padding: 1em;
+			}
+
+			.section-header {
+				font-weight: bold;
+			}
+			.section-header:not(:first-child) { /* Everything except the first*/
+				padding-top: 2em;
+			}
+			.section-item {
+				padding: .25em 1em;
+			}
+			.section-item:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+			.technical {
+				font-style: italic;
+				color: #333;
+				font-size: 0.85em;
+				margin: 0em 25px;
+				padding: 1.5em 1em 0em;
+				background-color: #F3F3F4;
+				position: relative;
+				border-radius: 2px;
+			}
+			.technical:before {
+				content: "Technical details";
+				position: absolute;
+				top: 0;
+				font-style: normal;
+				font-weight: bold;
+			}
+
+			h2 {
+				padding-left: 25px;
+			}
+			p {
+				margin-left: 25px;
+				padding: 0em 1em;
+				line-height: 1.5em;
+			}
+			img {
+				max-width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left-panel">
+			<div class="section-header">Pubs</div>
+			<div class="section-item">What is a pub?</div>
+			<div class="section-item">How do I create a Pub</div>
+			<div class="section-item">What are versions?</div>
+			<div class="section-item">How do I follow a pub do?</div>
+			<div class="section-item">How do I share pubs with my network?</div>
+			<div class="section-item">How do I organize pubs I follow?</div>
+			<div class="section-item">How do I share a draft by URL?</div>
+			<div class="section-item">How do I attribute files to specific people?</div>
+			<div class="section-item">How do I add contributors?</div>
+			<div class="section-item">How do I designate contributor roles?</div>
+			<div class="section-item">How do I edit my files?</div>
+			<div class="section-item">How do I import files?</div>
+			<div class="section-item">How do I export documents?</div>
+			<div class="section-item">How do I assign a DOI</div>
+			<div class="section-item">What happens after I publish</div>
+			<div class="section-item">Can I delete after I publish</div>
+			<div class="section-item">Can I publish a clone of a private version?</div>
+			<div class="section-item">How do I provide a previewImage and description for my Pub?</div>
+			<div class="section-item">How do I change the license associated with my document</div>
+			<div class="section-item">Why are the license selections limited?</div>
+			<div class="section-item">How do I add contributors to a Pub</div>
+			<div class="section-item">How do I add authors to a Pub</div>
+			<div class="section-item">How do I add non-PubPub users to a Pub?</div>
+			<div class="section-item">How do I add an image to my Pub?</div>
+			<div class="section-item">How do I add an image from one Pub to another Pub?</div>
+			<div class="section-item">How do we show diffs? What are we diffing?</div>
+			<div class="section-item">How is the document file stored (xml)</div>
+			<div class="section-item">How do I create a highlight?</div>
+			<div class="section-item">Can highlights be private?</div>
+			<div class="section-item">How do I include a highlight in my comment/pub?</div>
+			<div class="section-item">How do I see all of the highlights I've ever saved?</div>
+			<div class="section-item">How are highlights stored along with pubs?</div>
+			<div class="section-item">Can I highlight over images or other media?</div>
+			<div class="section-item">How do I close a discussion?</div>
+			<div class="section-item">How do I suggest edits?</div>
+			<div class="section-item">What is a PR? How do I submit changes?</div>
+			<div class="section-item">How are edit suggestions merged?</div>
+			<div class="section-item">What happens if a suggestion causes conflicts?</div>
+			<div class="section-item">How do we relate files together in a document?</div>
+			<div class="section-item">How do I publish just a single image with associated data?</div>
+			<div class="section-item">How do I export a Pub?</div>
+			<div class="section-item">How are authors informed about new discussions?</div>
+			<div class="section-item">How does a reader find what is new since they last read?</div>
+			<div class="section-item">How is specific file attribution (crediting people for a given file) maintained?</div>
+			<div class="section-item">How do I view diffs?</div>
+			<div class="section-item">How do I update a Pub’s metadata (title, DOI, funding, etc). (Where is it stored? Is it versioned?)</div>
+			<div class="section-item">How do I import from markdown/word/anything?</div>
+			<div class="section-item">How do I set which journals are displayed for a given pub (If it’s featured in 500, maybe I don’t want to show them all)</div>
+			<div class="section-item">How do you publish a document (publish specific versions)</div>
+			<div class="section-item">How do I delete my pub?</div>
+			<div class="section-item">How do you edit a pub?</div>
+			<div class="section-item">How do you create a pub?</div>
+			<div class="section-item">How do you delete a pub?</div>
+			<div class="section-item">How do you save a version?</div>
+			<div class="section-item">How does an author validate but not merge a fork? (e.g. for translations)</div>
+			<div class="section-item">How do you accept a PR as author-approved translation without merging it into master? How do you designate certain clones as ‘author-approved’?</div>
+			<div class="section-item">How do I add references to my pub?</div>
+			<div class="section-item">How do you export as PDF? How do we cache that?</div>
+			<div class="section-item">What are the settings you might want for a pub?</div>
+			<div class="section-item">Do we store diffs or calculate them on the fly?</div>
+			<div class="section-item">How do you choose to display on author list? Display on contributors list?</div>
+			<div class="section-item">How do you share a public URL of the work?</div>
+			<div class="section-item">How do you specifically ignore warnings (? did I mean notifications) for one pub?</div>
+			<div class="section-header">Users</div>
+			<div class="section-item">What does following a user do?</div>
+			<div class="section-item">How do I follow a user?</div>
+			<div class="section-item">How do I delete my user account?</div>
+			<div class="section-header">My Account</div>
+			<div class="section-item">How do I create an account?</div>
+			<div class="section-item">How do I change my profile picture?</div>
+			<div class="section-item">How do I get an RSS feed for my network?</div>
+			<div class="section-item">How do I edit my profile?</div>
+			<div class="section-item">How do I organize the pubs that I follow?</div>
+			<div class="section-item">How do I see all of the Forks I’ve made?</div>
+			<div class="section-item">How do I see all of my Pubs?</div>
+			<div class="section-item">How do I see all of the assets I’ve ever user? Or am attributed with?</div>
+			<div class="section-item">How do I follow a pub/user/journal? What does it do?</div>
+			<div class="section-item">How we track your pubs that you’ve recently edited or touched?</div>
+			<div class="section-header">Discussions</div>
+			<div class="section-item">What are discussions?</div>
+			<div class="section-item">How do I invite a reviewer that has a PubPub Account?</div>
+			<div class="section-item">How do I invite a reviewer that doesn't have PubPub Account?</div>
+			<div class="section-item">How do I accept an invitation as a reviewer</div>
+			<div class="section-item">How do I accept an invitation if I don’t have a pubpub account</div>
+			<div class="section-item">How do I create a highlight?</div>
+			<div class="section-item">How do I reference a highlight from a discussion item?</div>
+			<div class="section-item">How do I create a discussion?</div>
+			<div class="section-item">How do I edit a discussion?</div>
+			<div class="section-item">How do I apply a label to a discussion?</div>
+			<div class="section-item">As a Journal, how do I curate discussions?</div>
+			<div class="section-item">How do I invite a reviewer? How do I invite a collaborator by email?</div>
+			<div class="section-item">How do I moderate discussions? How do I set the default view for a discussion</div>
+			<div class="section-item">How do you number the discussion parents? The numbers must stay constant even if a discussion is made public/private.</div>
+			<div class="section-item">How do you make discussion public/private?</div>
+			<div class="section-item">Is it possible to switch a discussion from private to public?</div>
+			<div class="section-item">How do we migrate upvotes?</div>
+			<div class="section-header">Journals</div>
+			<div class="section-item">How do I as a Journal manage submissions?</div>
+			<div class="section-item">How do I discover new journals to read?</div>
+			<div class="section-item">How do I discover new journals to submit to?</div>
+			<div class="section-item">What does following a Journal do?</div>
+			<div class="section-item">How do I get an RSS feed for my journal?</div>
+			<div class="section-item">How do I find journals to follow?</div>
+			<div class="section-item">How do I find journals to submit to?</div>
+			<div class="section-item">What does featuring a Pub in a journal do (who can do it)</div>
+			<div class="section-item">Who can feature pubs in a journal?</div>
+			<div class="section-item">What happens to a submission when a pub is featured or not featured</div>
+			<div class="section-item">How are journals informed when a user submits?</div>
+			<div class="section-item">How do journals organize their content?</div>
+			<div class="section-item">How does a journal manage submissions, reviews?</div>
+			<div class="section-header">Ecosystem</div>
+			<div class="section-item">How is the data split/archived/shared across other universities (needs to have private stuff removed, while giving all the public data)</div>
+			<div class="section-item">How do we manage approved editors/plugins/apps?</div>
+
+
+
+
+		</div>
+		<div class="right-panel">
+			<!-- ******** -->
+			<!-- Pubs -->
+			<!-- ******** -->
+			<h1>Pubs</h1>
+			<h2>What is a pub?</h2>
+			<h2>How do I create a Pub</h2>
+			<h2>What are versions?</h2>
+			<h2>How do I follow a pub do?</h2>
+			<h2>How do I share pubs with my network?</h2>
+			<h2>How do I organize pubs I follow?</h2>
+			<h2>How do I share a draft by URL?</h2>
+			<h2>How do I attribute files to specific people?</h2>
+			<h2>How do I add contributors?</h2>
+			<h2>How do I designate contributor roles?</h2>
+			<h2>How do I edit my files?</h2>
+			<h2>How do I import files?</h2>
+			<h2>How do I export documents?</h2>
+			<h2>How do I assign a DOI</h2>
+			<h2>What happens after I publish</h2>
+			<h2>Can I delete after I publish</h2>
+			<h2>Can I publish a clone of a private version?</h2>
+			<h2>How do I provide a previewImage and description for my Pub?</h2>
+			<h2>How do I change the license associated with my document</h2>
+			<h2>Why are the license selections limited?</h2>
+			<h2>How do I add contributors to a Pub</h2>
+			<h2>How do I add authors to a Pub</h2>
+			<h2>How do I add non-PubPub users to a Pub?</h2>
+			<h2>How do I add an image to my Pub?</h2>
+			<h2>How do I add an image from one Pub to another Pub?</h2>
+			<h2>How do we show diffs? What are we diffing?</h2>
+			<h2>How is the document file stored (xml)</h2>
+			<h2>How do I create a highlight?</h2>
+			<h2>Can highlights be private?</h2>
+			<h2>How do I include a highlight in my comment/pub?</h2>
+			<h2>How do I see all of the highlights I've ever saved?</h2>
+			<h2>How are highlights stored along with pubs?</h2>
+			<h2>Can I highlight over images or other media?</h2>
+			<h2>How do I close a discussion?</h2>
+			<h2>How do I suggest edits?</h2>
+			<h2>What is a PR? How do I submit changes?</h2>
+				<p class="technical">A PR is a pointer to a specific version from a cloned pub.</p>
+			<h2>How are edit suggestions merged?</h2>
+				<p class="technical">The version is added to the list of versions from the Pub</p>
+			<h2>What happens if a suggestion causes conflicts?</h2>
+			<h2>How do we relate files together in a document?</h2>
+			<h2>How do I publish just a single image with associated data?</h2>
+			<h2>How do I export a Pub?</h2>
+				<p class="technical">What comes with it? (Discussions, article, journal labels, etc)</p>
+			<h2>How are authors informed about new discussions?</h2>
+			<h2>How does a reader find what is new since they last read?</h2>
+			<h2>How is specific file attribution (crediting people for a given file) maintained?</h2>
+			<h2>How do I view diffs?</h2>
+			<h2>How do I update a Pub’s metadata (title, DOI, funding, etc). (Where is it stored? Is it versioned?)</h2>
+			<h2>How do I import from markdown/word/anything?</h2>
+			<h2>How do I set which journals are displayed for a given pub (If it’s featured in 500, maybe I don’t want to show them all)</h2>
+			<h2>How do you publish a document (publish specific versions)</h2>
+			<h2>How do I delete my pub?</h2>
+			<h2>How do you edit a pub?</h2>
+			<h2>How do you create a pub?</h2>
+			<h2>How do you delete a pub?</h2>
+			<h2>How do you save a version?</h2>
+			<h2>How does an author validate but not merge a fork? (e.g. for translations)</h2>
+			<h2>How do you accept a PR as author-approved translation without merging it into master? How do you designate certain clones as ‘author-approved’?</h2>
+			<h2>How do I add references to my pub?</h2>
+			<h2>How do you export as PDF? How do we cache that?</h2>
+			<p class="technical">What do we do if it can't be well represented as a PDF? What if I export a Pub that is only a dataset? How do we make it clear that there is never confusion here</p>
+			<h2>What are the settings you might want for a pub?</h2>
+				- slug
+				- previewImage
+				- description
+			<h2>Do we store diffs or calculate them on the fly?</h2>
+			<h2>How do you choose to display on author list? Display on contributors list?</h2>
+			<h2>How do you share a public URL of the work?</h2>
+			<h2>How do you specifically ignore warnings (? did I mean notifications) for one pub?</h2>
+
+			<!-- ******** -->
+			<!-- Users -->
+			<!-- ******** -->
+			<h1>Users</h1>
+			
+			<h2>What does following a user do?</h2>
+			<h2>How do I follow a user?</h2>
+			<h2>How do I delete my user account?</h2>
+
+
+			<!-- ******** -->
+			<!-- My Account -->
+			<!-- ******** -->
+			<h1>My Account</h1>
+			<h2>How do I create an account?</h2>
+			<h2>How do I change my profile picture?</h2>
+			<h2>How do I get an RSS feed for my network?</h2>
+			<h2>How do I edit my profile?</h2>
+			<h2>How do I organize the pubs that I follow?</h2>
+			<h2>How do I see all of the Forks I’ve made?</h2>
+			<h2>How do I see all of my Pubs?</h2>
+			<h2>How do I see all of the assets I’ve ever user? Or am attributed with?</h2>
+			<h2>How do I follow a pub/user/journal? What does it do?</h2>
+			<h2>How we track your pubs that you’ve recently edited or touched?</h2>
+
+			<!-- ******** -->
+			<!-- Discussions -->
+			<!-- ******** -->
+			<h1>Discussions</h1>
+			<h2>What are discussions?</h2>
+			<h2>How do I invite a reviewer that has a PubPub Account?</h2>
+			<h2>How do I invite a reviewer that doesn't have PubPub Account?</h2>
+			<h2>How do I accept an invitation as a reviewer</h2>
+			<h2>How do I accept an invitation if I don’t have a pubpub account</h2>
+			<h2>How do I create a highlight?</h2>
+			<h2>How do I reference a highlight from a discussion item?</h2>
+			<h2>How do I create a discussion?</h2>
+			<h2>How do I edit a discussion?</h2>
+			<h2>How do I apply a label to a discussion?</h2>
+			<h2>As a Journal, how do I curate discussions?</h2>
+			<h2>How do I invite a reviewer? How do I invite a collaborator by email?</h2>
+			<h2>How do I moderate discussions? How do I set the default view for a discussion</h2>
+				<p class="technical">Do default labels (e.g. ‘Review’, ‘Question’) get duplicated on each pub creation - to allow for customizability?</p>
+				<p>You can hide/close, which may be the most important.</p>
+			
+			<h2>How do you number the discussion parents? The numbers must stay constant even if a discussion is made public/private.</h2>
+			<h2>How do you make discussion public/private?</h2>
+			<h2>Is it possible to switch a discussion from private to public?</h2>
+					<p>No</p>
+			<h2>How do we migrate upvotes?</h2>
+				- Reactions?
+
+			<!-- ******** -->
+			<!-- JOURNALS -->
+			<!-- ******** -->
+			<h1>Journals</h1>
+			<h2>How do I as a Journal manage submissions?</h2>
+			<h2>How do I discover new journals to read?</h2>
+			<h2>How do I discover new journals to submit to?</h2>
+			<h2>What does following a Journal do?</h2>
+			<h2>How do I get an RSS feed for my journal?</h2>
+			<h2>How do I find journals to follow?</h2>
+			<h2>How do I find journals to submit to?</h2>
+			<h2>What does featuring a Pub in a journal do (who can do it)</h2>
+			<h2>Who can feature pubs in a journal?</h2>
+			<h2>What happens to a submission when a pub is featured or not featured</h2>
+			<h2>How are journals informed when a user submits?</h2>
+			<h2>How do journals organize their content?</h2>
+			<h2>How does a journal manage submissions, reviews?</h2>
+
+			<!-- ******** -->
+			<!-- Ecosystem -->
+			<!-- ******** -->
+			<h1>Ecosystem</h1>
+			<h2>How is the data split/archived/shared across other universities (needs to have private stuff removed, while giving all the public data)</h2>
+			<h2>How do we manage approved editors/plugins/apps?</h2>
+				<p class="technical">External service? for Managing and approving. Make a request to that service for a list of editors.</p>
+			
+
+		</div>
+	</body>
+
+
+</html>
