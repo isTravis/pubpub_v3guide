@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<title>Guide</title>
 		<style>
 			body {
 				margin: 0;
@@ -73,6 +74,8 @@
 			<div class="section-item">How do I follow a pub do?</div>
 			<div class="section-item">How do I share pubs with my network?</div>
 			<div class="section-item">How do I organize pubs I follow?</div>
+			<div class="section-item">How do I upload old documents? What if their authors are dead</div>
+				<p class="technical">Add a curator field</p>
 			<div class="section-item">How do I share a draft by URL?</div>
 			<div class="section-item">How do I attribute files to specific people?</div>
 			<div class="section-item">How do I add contributors?</div>
@@ -191,75 +194,119 @@
 			<!-- ******** -->
 			<h1>Pubs</h1>
 			<h2>What is a pub?</h2>
+				<p class="technical">A Pub can be though of similarly to a git repo with added metadata. At it's base, it is a collection of versioned files. Added metadata enable us to provide titles, discussions, permissions, and forking.</p>
+				<p>A Pub is a container that includes a file or collection of files. The contents of this container render out to a document. A Pub has a title, associated contributors, discussions, and versions.</p>
+				<p>At it's simplest, a Pub can replicate a simple traditional document or PDF. With more effort, a Pub can become an interactive, rich, complete research documentation and communication tool.</p> 
+				<p>Pubs (and thus the contents within them) can be cloned, forked, and reused. Pubs can be collaboratively updated, organized by different labels, and curated by Journals.</p>
+
 			<h2>How do I create a Pub</h2>
+				<p class="technical">Creating a pub creates a new row in the Pub table, new collaborator(s). Pubs are private by default. Pubs are initialized with no versions, but tools for importing content or opening the editor are made immediately available.</p>
+				<p>To create a Pub, click the 'New Pub' button in the top-right corner of the site. (TODO: show image of button). This button will lead you to a page that lets you specify the title, etc of a Pub (TODO: specify what fields will be present - show form. Once your Pub has been created, you can add collaborators, create new versions by importing, open in an editor, upload files, etc. </p>
 			<h2>What are versions?</h2>
-			<h2>How do I follow a pub do?</h2>
+				<p class="technical">Versions have their own table. They include a version message and other metadata. A version is linked to a specific Pub. There is a table that links a specific versions to specific files. Files can be identical across versions, but each version represents a unique set of files.</p>
+				<p>A version is a snapshot of the files within a Pub at a given time. Versions allow you to track the history of the pub as it evolves.</p>
+				<p>Versions can be public or private. Private versions are only visible to those listed as collaborators on a pub. Public versions are open to the public and are archived. Once made public, a version cannot be deleted as it is archived as an open publication. </p>
+			<h2>How do I follow a pub?</h2>
+				<p class="technical">There is a table keeping track of users and the pubs they follow. </p>
+				<p>To follow a pub, click the 'Follow' button at the top of a pub (TODO: image of button).</p>
+				<p>Following a pub allows you to stay up to date with the evolution of the document. After clicking follow, you can customize the types of notifications you will receive regarding the Pub. You can also apply custom labels to pubs to help you organize the collections of work that you follow.</p>
 			<h2>How do I share pubs with my network?</h2>
+				When you follow a pub, the users that follow you will receive an item in their newsfeed showing your interest in that given pub.
 			<h2>How do I organize pubs I follow?</h2>
-			<h2>How do I share a draft by URL?</h2>
+				<p>Custom labels can be applied to pubs that you follow. (TODO: show the label interface). These labels allow you to group Pubs that you follow into different categories. These labels can be used as filters and search tools when browsing the list of Pubs you follow. </p>
+			<h2>How do I share a private pub by URL?</h2>
+				<p>It is possible to share a private pub without explicitly adding users to the contributors list. On your pub, click the 'Collaborators Tab' (TODO: image of this tab). Click 'generate sharing url'. Anyone with this url will have access to read your work. To comment, fork, or clone, they will need to create an account.</p>
 			<h2>How do I attribute files to specific people?</h2>
+				<p>Each file can list the people that contributed to the creation of the work. (crediting people for a given file) To do this, navigate to the Files tab (TODO: image) and click on the 'edit attribution' button. Add users. These attributions will follow the file through the system, so even as new versions of the file are forked, created, or updated - the provenance of the word is maintained.</p>
 			<h2>How do I add contributors?</h2>
+				<p>(TODO: image) To add a contributor, click on the 'Contributors' tab on your pub. Search for people with PubPub accounts and add them. Notifications will be sent to new contributors alerting them of their new role.</p>
 			<h2>How do I designate contributor roles?</h2>
-			<h2>How do I edit my files?</h2>
-			<h2>How do I import files?</h2>
-			<h2>How do I export documents?</h2>
-			<h2>How do I assign a DOI</h2>
-			<h2>What happens after I publish</h2>
-			<h2>Can I delete after I publish</h2>
-			<h2>Can I publish a clone of a private version?</h2>
-			<h2>How do I provide a previewImage and description for my Pub?</h2>
-			<h2>How do I change the license associated with my document</h2>
-			<h2>Why are the license selections limited?</h2>
-			<h2>How do I add contributors to a Pub</h2>
+				<p>To ackowledge specific roles of contributors, go to the 'Contributors' tab (TODO: image) and scroll to the list of currently added contributors. Click the 'Edit roles' button and add roles. </p>
+			<h2>How do you choose to display on author list? Display on contributors list?</h2>
+				<p>Each contributor can have a custom display name per pub. The order of the authors can be dragged an re-ordered. Users without PubPub accounts can have their names added by creating an 'unclaimed' user row. Associated contributor row added as well. </p>
 			<h2>How do I add authors to a Pub</h2>
+				<p>Any contributor can be made into an author by clicking the 'Set as author' checkbox.</p>
 			<h2>How do I add non-PubPub users to a Pub?</h2>
-			<h2>How do I add an image to my Pub?</h2>
+				<p>To invite a non-pubpub user to a document they must first create a user account. (In the long-term, we want to have an 'invited contributor' table that manages invites and automatically sets them as contributors).</p>
+			<h2>How do I add files?</h2>
+				<p>Each version in a pub has an associated set of files. You can add new files by clicking the 'Add File' button. (TODO: image) Any file type can be added. Certain files will have special renderers that allow them to be rendered into the Pub document.</p>
+			<h2>How do I edit my files?</h2>
+				<p>To edit a specific file, navigate to the 'Files' tab. (TODO: image) Click on the 'Edit' button of the file you wish to edit and choose an option. All files can be edited by uploading a new file in its place. Many files types (documents, images, etc) will have custom editors that allow you to more richly edit files.</p>
+			<h2>How do I export documents?</h2>
+			<h2>How do you export as PDF? How do we cache that?</h2>
+				<p class="technical">What comes with it? (Discussions, article, journal labels, etc). What do we do if it can't be well represented as a PDF? What if I export a Pub that is only a dataset? How do we make it clear that there is never confusion her. I think we just say 'the main document is exported and all file types have an image fallback'.</p>
+				<p>You can export a Pub in several ways. The document associated with a pub can be exported as a PDF or XML. The entire pub itself (files, metadata, discussions) can be exported by selected 'Export .zip'.</p>
+			<h2>How do I assign a DOI</h2>
+				<p>DOIs can be assigned to a specific version of a Pub. Only public versions can be assigned a DOI. To assign a DOI - click on the menu for each version and choose 'Assign DOI'. This DOI is permanent to this version. (?) DOI versions?</p>
+			<h2>How do I publish a version?</h2>
+				<p>Navigate to the 'Versions' tab of your pub. To make a version public, click on the 'Publish Version' button. Publishing is a permanent act (imagine it like publishing a newspaper, there is no taking it back). Once published, the version and pub are archived. You can create as many versions as you like. </p>
+			<h2>Can I delete after I publish</h2>
+				<p>Once published, a version cannot be made private. A version can be redacted if situations prove it necessary, but the archive of the public work will remain.</p>
+			<h2>Can I publish a clone of a private pub?</h2>
+				<p>If you have access to a private pub, and clone the pub to suggest edits or drive the document in a different direction, you cannot publicly publish any ancestors of that work until the root parent which was cloned is made publicly available. </p>
+			<h2>How do I provide a previewImage and description for my Pub?</h2>
+			<h2>How do I update a Pub’s metadata (title, DOI, funding, etc). (Where is it stored? Is it versioned?)</h2>
+				<p>Click on the 'Settings' tab of your pub. Options to set the preview image, title, description, and other 
+				metadata are available.</p>
+			<h2>How do I change the license associated with my document</h2>
+				<p>Click on the 'Settings' tab of your pub. An Option to set the license is available.</p>
+			<h2>Why are the license selections limited?</h2>
+				<p>The type of licenses available on PubPub is restricted to those liceneses that allow work to be freely available, remixed, and edited.</p>
 			<h2>How do I add an image from one Pub to another Pub?</h2>
+				<p>Individual files within a pub can be cloned to a new or existing pub. To do this, navigate to the 'File' tab of a pub and select the 'Clone to' option. Complete the options and save.</p>
 			<h2>How do we show diffs? What are we diffing?</h2>
+				<p>The difference between any to snapshots of a given file can be calculated. For many file types, we will provide a visual difference that can be easily compared. For binary or proprietary files, a visual diff is not possible, so the two files are simply presented.</p>
 			<h2>How is the document file stored (xml)</h2>
+				<p>All document files are stored as XML documents. PubPub XML documents use schema standards to structure the document so that it is parsable by machines and can be rendered into many different formats.</p>
 			<h2>How do I create a highlight?</h2>
+				<p>Highlights can be made on documents by selecting a section of text and clicking 'Save Highlight'. These highlights can then be used in documents, discussions, or for your own use.</p>
 			<h2>Can highlights be private?</h2>
+				<p>Highlights are public. Highlights you make on public documents are available to be browsed on your profile. Highlights made on private versions will not be available for the public to see. </p>
 			<h2>How do I include a highlight in my comment/pub?</h2>
+				<p>To include a highlight in the comment/pub, simply use the @mention or !embed tool. Start by typing @ or ! and an autocomplete menu will let you select your highlight.</p>
 			<h2>How do I see all of the highlights I've ever saved?</h2>
+				<p>To browse all of the highlights you've made, navigate to your User profile and click 'Highlights'</p>
 			<h2>How are highlights stored along with pubs?</h2>
+				<p class="technical">Highlights are stored as !embed or @mentions. On the XML > Rendering parser, these are replaced with the actual highlight content. Perhaps we store a cache of all the @mention and !embed docs with the repo so we can populate offline. But meh - then you don't get the benefit of a live-updated view. Would have to update caches.</p>
 			<h2>Can I highlight over images or other media?</h2>
+				Highlights are explicitly for text. Images and other media can be referenced or cloned independently.
 			<h2>How do I close a discussion?</h2>
+				<p>To close a discussion, the author of the discussion or author of the parent pub can click the 'Close Discussion' button (TODO:image). Closed discussions can still be found by filtering for them.</p>
 			<h2>How do I suggest edits?</h2>
+				<p>To suggest edits, click the 'Suggest Edits' button. This will create a clone of the Pub for you to edit. When you have completed the edits you'd like to suggest, click the 'Submit Edits' button.</p>
 			<h2>What is a PR? How do I submit changes?</h2>
 				<p class="technical">A PR is a pointer to a specific version from a cloned pub.</p>
 			<h2>How are edit suggestions merged?</h2>
 				<p class="technical">The version is added to the list of versions from the Pub</p>
+
 			<h2>What happens if a suggestion causes conflicts?</h2>
 			<h2>How do we relate files together in a document?</h2>
+				<p class="technical">There is a table of File relationships that relate one file to another.</p>
+				<p>Files can be related to each other, for example if a block of code generates a given image. To create manage these relationships, go to the 'File' view of your Pub. Click on 'Manage Relations'. Managing relations of a file allow linked files to be easily accessible in the rendered document.</p>
 			<h2>How do I publish just a single image with associated data?</h2>
-			<h2>How do I export a Pub?</h2>
-				<p class="technical">What comes with it? (Discussions, article, journal labels, etc)</p>
+				<p>If there is no document file in a pub, an error message will appear with a link to the files tab. To simply display the image, create a document file and open it in an editor that can set the image to display.</p>
 			<h2>How are authors informed about new discussions?</h2>
+				<p>Authors (and anyone who follows a pub) can be subscribed to receive notifications when there are new discussions on a given pub. These discussions will show up in the user's feed, as well as by email if selected.</p>
 			<h2>How does a reader find what is new since they last read?</h2>
-			<h2>How is specific file attribution (crediting people for a given file) maintained?</h2>
+				<p>Each user has a custom Activity List that shows them recent changes made by the users, pubs, journals, and labels that they follow.</p>
+			
 			<h2>How do I view diffs?</h2>
-			<h2>How do I update a Pub’s metadata (title, DOI, funding, etc). (Where is it stored? Is it versioned?)</h2>
+				<p>To view diffs, navigate to the 'Versions' tab and click 'View diff' on a specific version. By default, this will display the diff between this version and the previous. This screen also allows you to view the diff between that version and any other version in the chain.</p>
+			
 			<h2>How do I import from markdown/word/anything?</h2>
+				<p>Navigate to the 'Files' tab of your pub. For each file type, you can choose to import new, or edit by import. Depending on the file type, you will be shown an importing screen that confirms the import conversion (e.g. from docx).</p>
 			<h2>How do I set which journals are displayed for a given pub (If it’s featured in 500, maybe I don’t want to show them all)</h2>
-			<h2>How do you publish a document (publish specific versions)</h2>
+				<p>Though your work may be featured in 50 journals, you may not want to display all 50 featuring journals on the front of your pub. You can specify which journals are shown by navigating to the 'Journals' tab of a Pub and selecting 'Display on Pub' for each journal you wish to display.</p>
 			<h2>How do I delete my pub?</h2>
+				<p>A pub that has been published cannot be deleted. It is part of the public archive. Unpublished works can be deleted by navigating to the pub and going to the 'Settings' tab. At the bottom, there is an option to 'DELETE PUB'.</p>
 			<h2>How do you edit a pub?</h2>
-			<h2>How do you create a pub?</h2>
-			<h2>How do you delete a pub?</h2>
+				<p>Editing a Pub means editing a specific file within a pub. Click the edit button to edit the main document - or click the 'Files' tab to edit a specific file. </p>
 			<h2>How do you save a version?</h2>
+				<p>A new version is saved when any of the files are saved within a Pub. From within an editor, you are able to save a version updating many files at once.</p>
 			<h2>How does an author validate but not merge a fork? (e.g. for translations)</h2>
 			<h2>How do you accept a PR as author-approved translation without merging it into master? How do you designate certain clones as ‘author-approved’?</h2>
-			<h2>How do I add references to my pub?</h2>
-			<h2>How do you export as PDF? How do we cache that?</h2>
-			<p class="technical">What do we do if it can't be well represented as a PDF? What if I export a Pub that is only a dataset? How do we make it clear that there is never confusion here</p>
-			<h2>What are the settings you might want for a pub?</h2>
-				- slug
-				- previewImage
-				- description
-			<h2>Do we store diffs or calculate them on the fly?</h2>
-			<h2>How do you choose to display on author list? Display on contributors list?</h2>
-			<h2>How do you share a public URL of the work?</h2>
-			<h2>How do you specifically ignore warnings (? did I mean notifications) for one pub?</h2>
+				<p>Some forks of a pub are worthy of authentication even if they are not merged into the main document pipeline. For example, translations of a pub into other languages. It is useful to have these forks quickly available without merging them into the original pub. An author can set any fork or any PR as an 'authorized fork' and it will show up towards the top of the document. We will show (TODO: show image) '4 authorized forks'. Find a better word than 'authorized'</p>
+			
 
 			<!-- ******** -->
 			<!-- Users -->
@@ -267,8 +314,10 @@
 			<h1>Users</h1>
 			
 			<h2>What does following a user do?</h2>
+				<p>Following a user allows you to be notified when that user posts a new pub, a new discussion, or has other activity. You can customize which of these notifications you receive when following a user. </p>
 			<h2>How do I follow a user?</h2>
-			<h2>How do I delete my user account?</h2>
+				<p>To follow a user, navigate to their profile and click follow.</p>
+			
 
 
 			<!-- ******** -->
@@ -276,60 +325,91 @@
 			<!-- ******** -->
 			<h1>My Account</h1>
 			<h2>How do I create an account?</h2>
+				<p>Click on 'Sign up'. Enter your email and a link to signup will be sent.</p>
 			<h2>How do I change my profile picture?</h2>
+				<p>Go your profile and click 'Settings'</p>
 			<h2>How do I get an RSS feed for my network?</h2>
+				<p>On your activity list, click the 'RSS' button.</p>
 			<h2>How do I edit my profile?</h2>
+				<p>Go to settings, update stuff and hit save.</p>
 			<h2>How do I organize the pubs that I follow?</h2>
+				<p>You can apply labels to the pubs you are following. These labels can be used as filters</p>
 			<h2>How do I see all of the Forks I’ve made?</h2>
+				<p>Navigate to your profile and click 'Forks'. </p>
 			<h2>How do I see all of my Pubs?</h2>
+				<p>Navigate to your profile and click 'Pubs'. You can pin certain pubs as being featured on your profile.</p>
 			<h2>How do I see all of the assets I’ve ever user? Or am attributed with?</h2>
+				<p>You can see the full list of files attributed to you. We will show you the context of these files.</p>
 			<h2>How do I follow a pub/user/journal? What does it do?</h2>
+				<p>Click the follow button. Following a thing lets gives you notifications when there is something new. You can customize each follow to deliever only the notifications you are interested in. You can see everything you're following my navigating to your user profile and clicking 'Following'.</p>
 			<h2>How we track your pubs that you’ve recently edited or touched?</h2>
+				<p class="technical">We have a list of all the pubs that you've read. So we filter that for the pubs you own and use that date to sort 'my recent docs'.</p>
+			<h2>How do I delete my user account?</h2>
+				<p>Your user account can be deleted by navigating to your User Profile>Settings and clicking 'Delete Account'. If you have any published pubs, your account name will still be tied to these public works.</p>
 
 			<!-- ******** -->
 			<!-- Discussions -->
 			<!-- ******** -->
 			<h1>Discussions</h1>
 			<h2>What are discussions?</h2>
+				<p>Discussions are threaded conversations that provide context along-side a pub. Anyone can participate in discussions and they can range from small comments to major reviews. Discussions can be moderated by the authors of a pub.</p>
 			<h2>How do I invite a reviewer that has a PubPub Account?</h2>
+				<p>A reviewer can be invited to leave a review on a given pub. Click on 'Invite Reviewer' and search for the user. They will receive an email and notification. They will have an option to accept/decline the review request.</p>
 			<h2>How do I invite a reviewer that doesn't have PubPub Account?</h2>
+				<p class="technical">When a reviewer accepts, any discussions associated with them are listed below their name.</p>
+				<p>If you'd like to invite a user who does not have a pubpub account, you can invite them by email. They will be prompted to create an account and then post a review. </p>
 			<h2>How do I accept an invitation as a reviewer</h2>
+				<p>When you are invited to review a pub, there will be a notice at the top of the discussions section. You can  choose to click Accept Invitation or Reject. If you click accept, you will be listed as an invited reviewer and your reviews/comments will be listed.</p>
 			<h2>How do I accept an invitation if I don’t have a pubpub account</h2>
-			<h2>How do I create a highlight?</h2>
+				<p>Follow the link to create the account. Then proceed as normal</p>
 			<h2>How do I reference a highlight from a discussion item?</h2>
+				<p>@mention or !embed</p>
 			<h2>How do I create a discussion?</h2>
+				<p>Click 'New Discussion'. Give it a title.</p>
 			<h2>How do I edit a discussion?</h2>
+				<p>Go to the discussion you've created, click edit. Your edit history will be saved.</p>
 			<h2>How do I apply a label to a discussion?</h2>
+				<p>Click on a discussion topic, click 'labels' and check the boxes of the labels that should apply.</p>
 			<h2>As a Journal, how do I curate discussions?</h2>
-			<h2>How do I invite a reviewer? How do I invite a collaborator by email?</h2>
+				<p>As a journal, if you feature a pub, you can apply custom labels. There will be a long list of all the labels you have access to, based on which journals you are the admin of. </p>
 			<h2>How do I moderate discussions? How do I set the default view for a discussion</h2>
 				<p class="technical">Do default labels (e.g. ‘Review’, ‘Question’) get duplicated on each pub creation - to allow for customizability?</p>
 				<p>You can hide/close, which may be the most important.</p>
 			
 			<h2>How do you number the discussion parents? The numbers must stay constant even if a discussion is made public/private.</h2>
+				<p class="technical">Number everything sequentially based on top createDate. Number private conversions with #private1.</p>
 			<h2>How do you make discussion public/private?</h2>
-			<h2>Is it possible to switch a discussion from private to public?</h2>
-					<p>No</p>
+				<p>Discussions can be marked as public or private. If created as a private discussion, they will remain forever private. There may be some feature in the future that lets you transition private->public but we have to get approval from all memebrs of the thread.</p>
 			<h2>How do we migrate upvotes?</h2>
-				- Reactions?
+				<p class="technicak">Reactions.</p>
+				<p>Reactions can be used to let users post their reaction to work. We have to find the right balance of reactions.</p>
 
 			<!-- ******** -->
 			<!-- JOURNALS -->
 			<!-- ******** -->
 			<h1>Journals</h1>
+			<h2>How do I create a journal?</h2>
+				<p>Navigate to pubpub.org/journals. Click 'Create Journal'. Give it a title, etc.</p>
 			<h2>How do I as a Journal manage submissions?</h2>
+				<p>When a person submits a pub to your journal, all jouranl admins will receive a notification. Journal submissions can be found in Journal>submissions. Submissions can be approved or rejected. You can invite reviewers to a particular pub. Do you get a notification when one of your reviewers accepts an invitation? Yes.</p>
 			<h2>How do I discover new journals to read?</h2>
+				<p>pubpub.org/journals features work from active journals. You can also search for journals from here.</p>
 			<h2>How do I discover new journals to submit to?</h2>
+				<p>We should build a system that recommends journals based on work with similar labels.</p>
 			<h2>What does following a Journal do?</h2>
+				<p>Following a journal lets you keep up to date with new features in the journal.</p>
 			<h2>How do I get an RSS feed for my journal?</h2>
-			<h2>How do I find journals to follow?</h2>
-			<h2>How do I find journals to submit to?</h2>
+				<p>Go to the journal and click 'RSS'</p>
 			<h2>What does featuring a Pub in a journal do (who can do it)</h2>
+				<p>Any admin can feature a pub in a journal. Featuring a pub in a journal states the journals approval of the work based on their review procedures.</p>
 			<h2>Who can feature pubs in a journal?</h2>
+				<p>Admins</p>
 			<h2>What happens to a submission when a pub is featured or not featured</h2>
+				<p>The user who submitted the pub (and all authors of the pub) are notified when a journal features or does not feature a pub.</p>
 			<h2>How are journals informed when a user submits?</h2>
+				<p>Journal admins receive notifications</p>
 			<h2>How do journals organize their content?</h2>
-			<h2>How does a journal manage submissions, reviews?</h2>
+				<p>Journals can use custom labels to create collections.</p>
 
 			<!-- ******** -->
 			<!-- Ecosystem -->
@@ -338,6 +418,8 @@
 			<h2>How is the data split/archived/shared across other universities (needs to have private stuff removed, while giving all the public data)</h2>
 			<h2>How do we manage approved editors/plugins/apps?</h2>
 				<p class="technical">External service? for Managing and approving. Make a request to that service for a list of editors.</p>
+			<h2>Haven't people tried this before?</h2>
+			<h2>What makes you think this'll work, jackass?</h2>
 			
 
 		</div>
