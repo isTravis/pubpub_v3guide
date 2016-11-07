@@ -61,7 +61,9 @@
 				line-height: 1.5em;
 			}
 			img {
-				max-width: 100%;
+				max-width: calc(100% - 50px);
+				margin: 1em 25px;
+				box-shadow: 0px 1px 5px #555;
 			}
 		</style>
 	</head>
@@ -75,7 +77,6 @@
 			<div class="section-item">How do I share pubs with my network?</div>
 			<div class="section-item">How do I organize pubs I follow?</div>
 			<div class="section-item">How do I upload old documents? What if their authors are dead</div>
-				<p class="technical">Add a curator field</p>
 			<div class="section-item">How do I share a draft by URL?</div>
 			<div class="section-item">How do I attribute files to specific people?</div>
 			<div class="section-item">How do I add contributors?</div>
@@ -201,25 +202,36 @@
 
 			<h2>How do I create a Pub</h2>
 				<p class="technical">Creating a pub creates a new row in the Pub table, new collaborator(s). Pubs are private by default. Pubs are initialized with no versions, but tools for importing content or opening the editor are made immediately available.</p>
-				<p>To create a Pub, click the 'New Pub' button in the top-right corner of the site. (TODO: show image of button). This button will lead you to a page that lets you specify the title, etc of a Pub (TODO: specify what fields will be present - show form. Once your Pub has been created, you can add collaborators, create new versions by importing, open in an editor, upload files, etc. </p>
+				<p>To create a Pub, click the 'New Pub' button in the top-right corner of the site.</p> 
+				<img src="create01.png" />
+				<p>This button will lead you to a page that lets you specify the title, etc of a Pub. Once your Pub has been created, you can add collaborators, create new versions by importing, open in an editor, upload files, etc. </p>
+				<img src="create02.png" />
 			<h2>What are versions?</h2>
 				<p class="technical">Versions have their own table. They include a version message and other metadata. A version is linked to a specific Pub. There is a table that links a specific versions to specific files. Files can be identical across versions, but each version represents a unique set of files.</p>
 				<p>A version is a snapshot of the files within a Pub at a given time. Versions allow you to track the history of the pub as it evolves.</p>
 				<p>Versions can be public or private. Private versions are only visible to those listed as collaborators on a pub. Public versions are open to the public and are archived. Once made public, a version cannot be deleted as it is archived as an open publication. </p>
+				<img src="versions01.png" />
 			<h2>How do I follow a pub?</h2>
 				<p class="technical">There is a table keeping track of users and the pubs they follow. </p>
 				<p>To follow a pub, click the 'Follow' button at the top of a pub (TODO: image of button).</p>
 				<p>Following a pub allows you to stay up to date with the evolution of the document. After clicking follow, you can customize the types of notifications you will receive regarding the Pub. You can also apply custom labels to pubs to help you organize the collections of work that you follow.</p>
+				<img src="followpub_01.png" />
 			<h2>How do I share pubs with my network?</h2>
 				When you follow a pub, the users that follow you will receive an item in their newsfeed showing your interest in that given pub.
 			<h2>How do I organize pubs I follow?</h2>
 				<p>Custom labels can be applied to pubs that you follow. (TODO: show the label interface). These labels allow you to group Pubs that you follow into different categories. These labels can be used as filters and search tools when browsing the list of Pubs you follow. </p>
+				<img src="following01.png" />
+
+			<h2>How do I upload old documents? What if their authors are dead</h2>
+				<p class="technical">Add a curator field. Or perhaps, this should just be a type of role. Perhaps the owner of a document should be able to add users that are empty rows that can be 'claimed' by the author if/when they sign up. What does that iterface look like?</p>
 			<h2>How do I share a private pub by URL?</h2>
 				<p>It is possible to share a private pub without explicitly adding users to the contributors list. On your pub, click the 'Collaborators Tab' (TODO: image of this tab). Click 'generate sharing url'. Anyone with this url will have access to read your work. To comment, fork, or clone, they will need to create an account.</p>
+				<img src="collaborators01.png" />
 			<h2>How do I attribute files to specific people?</h2>
 				<p>Each file can list the people that contributed to the creation of the work. (crediting people for a given file) To do this, navigate to the Files tab (TODO: image) and click on the 'edit attribution' button. Add users. These attributions will follow the file through the system, so even as new versions of the file are forked, created, or updated - the provenance of the word is maintained.</p>
 			<h2>How do I add contributors?</h2>
 				<p>(TODO: image) To add a contributor, click on the 'Contributors' tab on your pub. Search for people with PubPub accounts and add them. Notifications will be sent to new contributors alerting them of their new role.</p>
+				<img src="collaborators01.png" />
 			<h2>How do I designate contributor roles?</h2>
 				<p>To ackowledge specific roles of contributors, go to the 'Contributors' tab (TODO: image) and scroll to the list of currently added contributors. Click the 'Edit roles' button and add roles. </p>
 			<h2>How do you choose to display on author list? Display on contributors list?</h2>
@@ -245,7 +257,8 @@
 			<h2>Can I publish a clone of a private pub?</h2>
 				<p>If you have access to a private pub, and clone the pub to suggest edits or drive the document in a different direction, you cannot publicly publish any ancestors of that work until the root parent which was cloned is made publicly available. </p>
 			<h2>How do I provide a previewImage and description for my Pub?</h2>
-			<h2>How do I update a Pub’s metadata (title, DOI, funding, etc). (Where is it stored? Is it versioned?)</h2>
+			<h2>How do I update a Pub’s metadata (title, description, previewImage, funding, etc).</h2>
+				<p class="technical">This metadata is stored on the Pub table and is not versioned.</p>
 				<p>Click on the 'Settings' tab of your pub. Options to set the preview image, title, description, and other 
 				metadata are available.</p>
 			<h2>How do I change the license associated with my document</h2>
@@ -269,13 +282,15 @@
 			<h2>How are highlights stored along with pubs?</h2>
 				<p class="technical">Highlights are stored as !embed or @mentions. On the XML > Rendering parser, these are replaced with the actual highlight content. Perhaps we store a cache of all the @mention and !embed docs with the repo so we can populate offline. But meh - then you don't get the benefit of a live-updated view. Would have to update caches.</p>
 			<h2>Can I highlight over images or other media?</h2>
-				Highlights are explicitly for text. Images and other media can be referenced or cloned independently.
+				<p>Highlights are explicitly for text. Images and other media can be referenced or cloned independently.</p>
 			<h2>How do I close a discussion?</h2>
 				<p>To close a discussion, the author of the discussion or author of the parent pub can click the 'Close Discussion' button (TODO:image). Closed discussions can still be found by filtering for them.</p>
+				<img src="discussion01.png" />
 			<h2>How do I suggest edits?</h2>
 				<p>To suggest edits, click the 'Suggest Edits' button. This will create a clone of the Pub for you to edit. When you have completed the edits you'd like to suggest, click the 'Submit Edits' button.</p>
-			<h2>What is a PR? How do I submit changes?</h2>
+			<h2>How do I suggest changes to a document which I'm not the author?</h2>
 				<p class="technical">A PR is a pointer to a specific version from a cloned pub.</p>
+				<p>To suggest changes, you fork an existing pub. You make the changes to that and then submit those changes back to the original pub. </p>
 			<h2>How are edit suggestions merged?</h2>
 				<p class="technical">The version is added to the list of versions from the Pub</p>
 
@@ -381,7 +396,7 @@
 			<h2>How do you make discussion public/private?</h2>
 				<p>Discussions can be marked as public or private. If created as a private discussion, they will remain forever private. There may be some feature in the future that lets you transition private->public but we have to get approval from all memebrs of the thread.</p>
 			<h2>How do we migrate upvotes?</h2>
-				<p class="technicak">Reactions.</p>
+				<p class="technical">Reactions.</p>
 				<p>Reactions can be used to let users post their reaction to work. We have to find the right balance of reactions.</p>
 
 			<!-- ******** -->
@@ -406,7 +421,7 @@
 				<p>Admins</p>
 			<h2>What happens to a submission when a pub is featured or not featured</h2>
 				<p>The user who submitted the pub (and all authors of the pub) are notified when a journal features or does not feature a pub.</p>
-			<h2>How are journals informed when a user submits?</h2>
+			<h2>How are journals informed when a user submi`ts?</h2>
 				<p>Journal admins receive notifications</p>
 			<h2>How do journals organize their content?</h2>
 				<p>Journals can use custom labels to create collections.</p>
@@ -416,11 +431,9 @@
 			<!-- ******** -->
 			<h1>Ecosystem</h1>
 			<h2>How is the data split/archived/shared across other universities (needs to have private stuff removed, while giving all the public data)</h2>
+				<p>Lots of ways, hopefully. Blockchain for validating pub hashes. Public cache is sent to archive and mirrored/lockss.</p>
 			<h2>How do we manage approved editors/plugins/apps?</h2>
 				<p class="technical">External service? for Managing and approving. Make a request to that service for a list of editors.</p>
-			<h2>Haven't people tried this before?</h2>
-			<h2>What makes you think this'll work, jackass?</h2>
-			
 
 		</div>
 	</body>
