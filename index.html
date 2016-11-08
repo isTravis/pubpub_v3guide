@@ -34,7 +34,7 @@
 				cursor: pointer;
 				text-decoration: underline;
 			}
-			.technical {
+			.technical, .requirements {
 				font-style: italic;
 				color: #333;
 				font-size: 0.85em;
@@ -50,6 +50,17 @@
 				top: 0;
 				font-style: normal;
 				font-weight: bold;
+			}
+
+			.requirements:before {
+				content: "Requirements. Must be able to:";
+				position: absolute;
+				top: 0;
+				font-style: normal;
+				font-weight: bold;
+			}
+			.requirements li {
+				margin-left: 1em;
 			}
 
 			h2 {
@@ -73,28 +84,36 @@
 			<div class="section-item">What is a pub?</div>
 			<div class="section-item">How do I create a Pub</div>
 			<div class="section-item">What are versions?</div>
-			<div class="section-item">How do I follow a pub do?</div>
+			<div class="section-item">How do I follow a pub?</div>
 			<div class="section-item">How do I share pubs with my network?</div>
 			<div class="section-item">How do I organize pubs I follow?</div>
 			<div class="section-item">How do I upload old documents? What if their authors are dead</div>
-			<div class="section-item">How do I share a draft by URL?</div>
+			<div class="section-item">How do I share a private pub by URL?</div>
+			<div class="section-header">Pubs · Versions</div>
+			<div class="section-header">Pubs · Files</div>
+			<div class="section-header">Pubs · Contributors</div>
+			<div class="section-header">Pubs · Journals</div>
+			<div class="section-header">Pubs · Forks</div>
+			<div class="section-header">Pubs · Settings</div>
+
 			<div class="section-item">How do I attribute files to specific people?</div>
 			<div class="section-item">How do I add contributors?</div>
 			<div class="section-item">How do I designate contributor roles?</div>
-			<div class="section-item">How do I edit my files?</div>
-			<div class="section-item">How do I import files?</div>
-			<div class="section-item">How do I export documents?</div>
-			<div class="section-item">How do I assign a DOI</div>
-			<div class="section-item">What happens after I publish</div>
-			<div class="section-item">Can I delete after I publish</div>
-			<div class="section-item">Can I publish a clone of a private version?</div>
-			<div class="section-item">How do I provide a previewImage and description for my Pub?</div>
-			<div class="section-item">How do I change the license associated with my document</div>
-			<div class="section-item">Why are the license selections limited?</div>
-			<div class="section-item">How do I add contributors to a Pub</div>
+			<div class="section-item">How do you choose to display on author list? Display on contributors list?</div>
 			<div class="section-item">How do I add authors to a Pub</div>
 			<div class="section-item">How do I add non-PubPub users to a Pub?</div>
-			<div class="section-item">How do I add an image to my Pub?</div>
+			<div class="section-item">How do I add files?</div>
+			<div class="section-item">How do I edit my files?</div>
+			<div class="section-item">How do I export documents?</div>
+			<div class="section-item">How do you export as PDF? How do we cache that?</div>
+			<div class="section-item">How do I assign a DOI</div>
+			<div class="section-item">How do I publish a version?</div>
+			<div class="section-item">Can I delete after I publish</div>
+			<div class="section-item">Can I publish a clone of a private pub?</div>
+			<div class="section-item">How do I provide a previewImage and description for my Pub?</div>
+			<div class="section-item">How do I update a Pub’s metadata (title, description, previewImage, funding, etc).</div>
+			<div class="section-item">How do I change the license associated with my document</div>
+			<div class="section-item">Why are the license selections limited?</div>
 			<div class="section-item">How do I add an image from one Pub to another Pub?</div>
 			<div class="section-item">How do we show diffs? What are we diffing?</div>
 			<div class="section-item">How is the document file stored (xml)</div>
@@ -106,38 +125,33 @@
 			<div class="section-item">Can I highlight over images or other media?</div>
 			<div class="section-item">How do I close a discussion?</div>
 			<div class="section-item">How do I suggest edits?</div>
-			<div class="section-item">What is a PR? How do I submit changes?</div>
+			<div class="section-item">How do I suggest changes to a document which I'm not the author?</div>
 			<div class="section-item">How are edit suggestions merged?</div>
+
 			<div class="section-item">What happens if a suggestion causes conflicts?</div>
 			<div class="section-item">How do we relate files together in a document?</div>
 			<div class="section-item">How do I publish just a single image with associated data?</div>
-			<div class="section-item">How do I export a Pub?</div>
 			<div class="section-item">How are authors informed about new discussions?</div>
 			<div class="section-item">How does a reader find what is new since they last read?</div>
-			<div class="section-item">How is specific file attribution (crediting people for a given file) maintained?</div>
+
 			<div class="section-item">How do I view diffs?</div>
-			<div class="section-item">How do I update a Pub’s metadata (title, DOI, funding, etc). (Where is it stored? Is it versioned?)</div>
+
 			<div class="section-item">How do I import from markdown/word/anything?</div>
 			<div class="section-item">How do I set which journals are displayed for a given pub (If it’s featured in 500, maybe I don’t want to show them all)</div>
-			<div class="section-item">How do you publish a document (publish specific versions)</div>
 			<div class="section-item">How do I delete my pub?</div>
 			<div class="section-item">How do you edit a pub?</div>
-			<div class="section-item">How do you create a pub?</div>
-			<div class="section-item">How do you delete a pub?</div>
 			<div class="section-item">How do you save a version?</div>
 			<div class="section-item">How does an author validate but not merge a fork? (e.g. for translations)</div>
 			<div class="section-item">How do you accept a PR as author-approved translation without merging it into master? How do you designate certain clones as ‘author-approved’?</div>
-			<div class="section-item">How do I add references to my pub?</div>
-			<div class="section-item">How do you export as PDF? How do we cache that?</div>
-			<div class="section-item">What are the settings you might want for a pub?</div>
-			<div class="section-item">Do we store diffs or calculate them on the fly?</div>
-			<div class="section-item">How do you choose to display on author list? Display on contributors list?</div>
-			<div class="section-item">How do you share a public URL of the work?</div>
-			<div class="section-item">How do you specifically ignore warnings (? did I mean notifications) for one pub?</div>
+
+
 			<div class="section-header">Users</div>
+
 			<div class="section-item">What does following a user do?</div>
 			<div class="section-item">How do I follow a user?</div>
-			<div class="section-item">How do I delete my user account?</div>
+
+
+
 			<div class="section-header">My Account</div>
 			<div class="section-item">How do I create an account?</div>
 			<div class="section-item">How do I change my profile picture?</div>
@@ -149,41 +163,43 @@
 			<div class="section-item">How do I see all of the assets I’ve ever user? Or am attributed with?</div>
 			<div class="section-item">How do I follow a pub/user/journal? What does it do?</div>
 			<div class="section-item">How we track your pubs that you’ve recently edited or touched?</div>
+			<div class="section-item">How do I delete my user account?</div>
+
 			<div class="section-header">Discussions</div>
 			<div class="section-item">What are discussions?</div>
 			<div class="section-item">How do I invite a reviewer that has a PubPub Account?</div>
 			<div class="section-item">How do I invite a reviewer that doesn't have PubPub Account?</div>
 			<div class="section-item">How do I accept an invitation as a reviewer</div>
 			<div class="section-item">How do I accept an invitation if I don’t have a pubpub account</div>
-			<div class="section-item">How do I create a highlight?</div>
 			<div class="section-item">How do I reference a highlight from a discussion item?</div>
 			<div class="section-item">How do I create a discussion?</div>
 			<div class="section-item">How do I edit a discussion?</div>
 			<div class="section-item">How do I apply a label to a discussion?</div>
 			<div class="section-item">As a Journal, how do I curate discussions?</div>
-			<div class="section-item">How do I invite a reviewer? How do I invite a collaborator by email?</div>
 			<div class="section-item">How do I moderate discussions? How do I set the default view for a discussion</div>
+
 			<div class="section-item">How do you number the discussion parents? The numbers must stay constant even if a discussion is made public/private.</div>
 			<div class="section-item">How do you make discussion public/private?</div>
-			<div class="section-item">Is it possible to switch a discussion from private to public?</div>
 			<div class="section-item">How do we migrate upvotes?</div>
+
 			<div class="section-header">Journals</div>
+			<div class="section-item">How do I create a journal?</div>
 			<div class="section-item">How do I as a Journal manage submissions?</div>
 			<div class="section-item">How do I discover new journals to read?</div>
 			<div class="section-item">How do I discover new journals to submit to?</div>
 			<div class="section-item">What does following a Journal do?</div>
 			<div class="section-item">How do I get an RSS feed for my journal?</div>
-			<div class="section-item">How do I find journals to follow?</div>
-			<div class="section-item">How do I find journals to submit to?</div>
 			<div class="section-item">What does featuring a Pub in a journal do (who can do it)</div>
 			<div class="section-item">Who can feature pubs in a journal?</div>
 			<div class="section-item">What happens to a submission when a pub is featured or not featured</div>
-			<div class="section-item">How are journals informed when a user submits?</div>
+			<div class="section-item">How are journals informed when a user submi`ts?</div>
 			<div class="section-item">How do journals organize their content?</div>
-			<div class="section-item">How does a journal manage submissions, reviews?</div>
+
 			<div class="section-header">Ecosystem</div>
 			<div class="section-item">How is the data split/archived/shared across other universities (needs to have private stuff removed, while giving all the public data)</div>
 			<div class="section-item">How do we manage approved editors/plugins/apps?</div>
+
+
 
 
 
@@ -200,33 +216,80 @@
 				<p>At it's simplest, a Pub can replicate a simple traditional document or PDF. With more effort, a Pub can become an interactive, rich, complete research documentation and communication tool.</p> 
 				<p>Pubs (and thus the contents within them) can be cloned, forked, and reused. Pubs can be collaboratively updated, organized by different labels, and curated by Journals.</p>
 
-			<h2>How do I create a Pub</h2>
-				<p class="technical">Creating a pub creates a new row in the Pub table, new collaborator(s). Pubs are private by default. Pubs are initialized with no versions, but tools for importing content or opening the editor are made immediately available.</p>
+			<h2>#02 - How do I create a Pub</h2>
+				<p class="technical">Creating a pub creates a new row in the Pub table, new collaborator(s). Pubs are private by default. Pubs are initialized with no versions, but tools for importing content or opening the editor are made immediately available. Do we let you set the license right away? Add collaborators? When you create a pub, you are given the option to upload/import docs or files or to open the editor. If there is no main.xml, then we render 'no doc' and show the file list. </p>
 				<p>To create a Pub, click the 'New Pub' button in the top-right corner of the site.</p> 
 				<img src="images/create01.png" />
 				<p>This button will lead you to a page that lets you specify the title, etc of a Pub. Once your Pub has been created, you can add collaborators, create new versions by importing, open in an editor, upload files, etc. </p>
 				<img src="images/create02.png" />
-			<h2>What are versions?</h2>
-				<p class="technical">Versions have their own table. They include a version message and other metadata. A version is linked to a specific Pub. There is a table that links a specific versions to specific files. Files can be identical across versions, but each version represents a unique set of files.</p>
-				<p>A version is a snapshot of the files within a Pub at a given time. Versions allow you to track the history of the pub as it evolves.</p>
-				<p>Versions can be public or private. Private versions are only visible to those listed as collaborators on a pub. Public versions are open to the public and are archived. Once made public, a version cannot be deleted as it is archived as an open publication. </p>
-				<img src="images/versions01.png" />
+			<h2>#03 - What do I do now that I created a pub?</h2>
+				<p class="technical">Give a guide that shows the steps of creating, maintaining a pub, etc.</p>
+			
 			<h2>How do I follow a pub?</h2>
 				<p class="technical">There is a table keeping track of users and the pubs they follow. </p>
 				<p>To follow a pub, click the 'Follow' button at the top of a pub (TODO: image of button).</p>
 				<p>Following a pub allows you to stay up to date with the evolution of the document. After clicking follow, you can customize the types of notifications you will receive regarding the Pub. You can also apply custom labels to pubs to help you organize the collections of work that you follow.</p>
 				<img src="images/followpub_01.png" />
 			<h2>How do I share pubs with my network?</h2>
-				When you follow a pub, the users that follow you will receive an item in their newsfeed showing your interest in that given pub.
+				<p>When you follow a pub, the users that follow you will receive an item in their newsfeed showing your interest in that given pub.</p>
 			<h2>How do I organize pubs I follow?</h2>
 				<p>Custom labels can be applied to pubs that you follow. (TODO: show the label interface). These labels allow you to group Pubs that you follow into different categories. These labels can be used as filters and search tools when browsing the list of Pubs you follow. </p>
 				<img src="images/following01.png" />
 
 			<h2>How do I upload old documents? What if their authors are dead</h2>
-				<p class="technical">Add a curator field. Or perhaps, this should just be a type of role. Perhaps the owner of a document should be able to add users that are empty rows that can be 'claimed' by the author if/when they sign up. What does that iterface look like?</p>
+				<p class="technical">Add a curator field. Or perhaps, this should just be a type of role. Perhaps the owner of a document should be able to add users that are empty rows that can be 'claimed' by the author if/when they sign up. What does that iterface look like? Let's enable the creation of uncalimed User accounts. We can have 15 John Snow's in the User table, that could be merged if a true John snow claimed them. </p>
 			<h2>How do I share a private pub by URL?</h2>
+				<p class="technical">Maybe we just don't have a share private link. Instead, have a really simple invite collaborator flow. A share private link is challenging because then we need to authenticate for future requests, etc. We also need to render a different interface for the discussion(?). The fact that you would still have to sign up anyways to comment, edit, etc - makes it perhaps easier to just sign up to begin with.</p>
 				<p>It is possible to share a private pub without explicitly adding users to the contributors list. On your pub, click the 'Collaborators Tab' (TODO: image of this tab). Click 'generate sharing url'. Anyone with this url will have access to read your work. To comment, fork, or clone, they will need to create an account.</p>
 				<img src="images/collaborators01.png" />
+
+			<h1>Pubs · Versions</h1>
+			<ul class="requirements">
+				<li>View versions with dates and message</li>
+				<li>Compare versions (diff view or otherwise)</li>
+				<li>Assign a DOI to a version</li>
+				<li>View if a version is public or private</li>
+				<li>Publish a version if private</li>
+				<li>Read the Pub at a specific version</li>
+			</ul>
+
+			<h2>What are versions?</h2>
+				<p class="technical">Versions have their own table. They include a version message and other metadata. A version is linked to a specific Pub. There is a table that links a specific versions to specific files. Files can be identical across versions, but each version represents a unique set of files.</p>
+				<p>A version is a snapshot of the files within a Pub at a given time. Versions allow you to track the history of the pub as it evolves.</p>
+				<p>Versions can be public or private. Private versions are only visible to those listed as collaborators on a pub. Public versions are open to the public and are archived. Once made public, a version cannot be deleted as it is archived as an open publication. </p>
+				<img src="images/versions01.png" />
+
+			<h1>Pubs · Files</h1>
+			<ul class="requirements">
+				<li>List files</li>
+				<li>Reveal link to file history</li>
+				<li>Reveal options to edit specific files</li>
+				<li>Reveal link to view specific file</li>
+			</ul>
+
+			<h1>Pubs · Contributors</h1>
+			<ul class="requirements">
+				<li>List contributors</li>
+				<li>Allow contributors to be added/removed</li>
+				<li>Allow contributors permissions to be set</li>
+				<li>Allow new contributors to be invited by email</li>
+				<li>Allow contributor to be marked as author</li>
+				<li>Allow contributor to be hidden from contributor list</li>
+				<li>Allow a contributor's contributions/roles to be listed</li>
+				<li>Allow contributors to be ordered (influences author render order)</li>
+			</ul>
+
+			<h1>Pubs · Journals</h1>
+			<ul class="requirements">
+				<li>List journals featuring (and journals submitted to)</li>
+				<li>Submit to new journals</li>
+				<li>Navigate to featuring/submitted journals</li>
+				<li>Display date of submission/feature</li>
+			</ul>
+			<h1>Pubs · Forks</h1>
+
+			<h1>Pubs · Settings</h1>
+
 			<h2>How do I attribute files to specific people?</h2>
 				<p>Each file can list the people that contributed to the creation of the work. (crediting people for a given file) To do this, navigate to the Files tab (TODO: image) and click on the 'edit attribution' button. Add users. These attributions will follow the file through the system, so even as new versions of the file are forked, created, or updated - the provenance of the word is maintained.</p>
 			<h2>How do I add contributors?</h2>
@@ -366,6 +429,21 @@
 			<!-- Discussions -->
 			<!-- ******** -->
 			<h1>Discussions</h1>
+			<ul class="requirements">
+				<li>Add new Discussion</li>
+				<li>Invite reviewer</li>
+				<li>Discover and review invited reviewers</li>
+				<li>Search/filter/sort discussions</li>
+				<li>Read discussion</li>
+				<li>Reply to discussion</li>
+				<li>Add labels to discussion (if I'm the pub owner, or discussion owner)</li>
+				<li>Edit labels (if I'm the pub owner)</li>
+				<li>Accept/Reject invitation(?)</li>
+				<li>Close discussions</li>
+				<li>React to discussions</li>
+				<li>Cite discussions</li>
+
+			</ul>
 			<h2>What are discussions?</h2>
 				<p>Discussions are threaded conversations that provide context along-side a pub. Anyone can participate in discussions and they can range from small comments to major reviews. Discussions can be moderated by the authors of a pub.</p>
 			<h2>How do I invite a reviewer that has a PubPub Account?</h2>
@@ -402,6 +480,15 @@
 			<!-- ******** -->
 			<!-- JOURNALS -->
 			<!-- ******** -->
+			<ul class="requirements">
+				<li>View featured pubs</li>
+				<li>View submitted pubs</li>
+				<li>Create collections</li>
+				<li>Edit collections</li>
+				<li>Render collection view</li>
+				<li>Apply collection labels to featured pubs</li>
+				<li>Add/Remove admins</li>
+			</ul>
 			<h1>Journals</h1>
 			<h2>How do I create a journal?</h2>
 				<p>Navigate to pubpub.org/journals. Click 'Create Journal'. Give it a title, etc.</p>
